@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta NAME="Author" LANG="ja-JP" content="著者名">
+<title>ポケモンしりとりゲーム</title>
+<link href="style2.css" rel="stylesheet" type="text/css">
+<style>
+    body{
+        background-image:url("R.png");
+        background-size:  cover;
+        background-repeat:  repeat;
+    }
+</style>
+</head>
+<body>
+<h1 class="px">ポケモンしりとりゲーム</h1>
+<div  class="waku" style="padding: 10px;margin-bottom:10px;border:5px double #333333;background-color: rgb(248, 255, 151);">
+<p style="font-weight:bold">&lt;ルール説明&gt;</p>
+<p>・制限時間20秒以内にポケモン名を答えるしりとりゲームです</p>
+<p>・相手(CPU)はランダムにポケモンを返してきます</p>
+<p>・enterキー、または「君に決めた！」ボタンを押すことで解答を確定します</p>
+<p>・下のテキストボックス内にカタカナで解答してください</p>
+<p>・相手の答えたポケモンの最後の文字が「ー」の場合は、後ろから二番目の文字から始まるポケモンを答えてください</p>
+<p>・対象の文字が拗音の場合は、直音として扱われます(例："ピチュー"の次は「ユ」から始まるポケモンを答える)</p>
+<p>・例外：ポリゴン2→最後の文字は「ツ」、ポリゴンZ→最後の文字は「ト」、ニドラン♂、ニドラン♀→最後の文字は「ス」</p>
+<p>・テキストボックス内でtabキーを押すことでリスタートします</p>
+</div>
+<div class="waku2" style="padding: 10px;margin-bottom:10px;border:2.5px dotted #69a7ee;background-color:#fcfcfc;">
+<p  class="px2" style="font-weight:bold" id="history"><br></p>
+<p  class="px2" style="font-weight:bold" id="msg">好きなポケモンを入力してスタート<br></p>
+<p style="font-weight:bold" id="msg3"><br></p>
+<p>
+    <label><input type="text" placeholder="ポケモン名" id="nameText" onkeydown="keydown_enter();"></label>
+    <input  style="font-weight:bold; border-radius:100vh;" type="button" value="君に決めた!" id="checkButton"><label  style="font-weight:bold" id="byousu">残り 秒</label>
+    
+</p>
+ <p class="px3" style="font-weight:bold" id="msg2"><br>相手は"   "を繰り出した!</p>
+ <p class="px3" style="font-weight:bold" id="msg4"><br></p>
+ </div>
+ <br>
+ <br>
+ <p style="text-align: right">背景画像引用元http://pikachuftt.blog82.fc2.com/blog-entry-799.html</p>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
